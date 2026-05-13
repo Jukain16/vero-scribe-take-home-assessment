@@ -13,7 +13,8 @@ This project uses ES Modules and must be run through a local live server.
 
 ### Using Python HTTP Server
 - Run 
-    ``` cd src
+    ```
+    cd src
     python -m http.server 8000
     ```
 - Open 
