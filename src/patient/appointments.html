@@ -1,12 +1,49 @@
 <!DOCTYPE html>
 <html>
-    <body>
-        <h1>Book an Appointment</h1>
-         <form action="appointments.js" method="post"></form>
-              <input type="text" placeholder="First Name" type="first name" required>
-              <input type="text" placeholder="Last Name" type="last name" required>
-              <input type="text" placeholder="OHIP number" type="ohip" required>
-              <input type="number" placeholder="Date of Birth" type="dob" required>
-              <input type="text" placeholder="Reasons for visit" type="reasons" required>
-    </body>
+<head>
+  <title>Book an Appointment</title>
+  <link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="booking-form">
+
+<h1>Book an Appointment</h1>
+
+<form id="bookingForm">
+
+  <label>First Name</label>
+  <input type="text" id="fname" required>
+
+  <label>Last Name</label>
+  <input type="text" id="lname" required>
+
+  <label>Health Number</label>
+  <input type="text" id="healthnum" required>
+
+  <label>Date of Birth</label>
+  <input type="date" id="dob" required>
+
+  <label>Phone Number</label>
+  <input type="tel" id="phone"
+    pattern="[0-9]{10}"
+    placeholder="1234567890"
+    required>
+
+  <label>Reason for Visit</label>
+  <textarea id="reason" rows="3" required></textarea>
+
+  <label>Select Date</label>
+  <select id="dateSelect"></select>
+
+  <label>Select Time</label>
+  <select id="timeSelect"></select>
+
+  <button type="submit">Submit</button>
+  <button type="button" onclick="history.back()">Cancel</button>
+
+</form>
+
+<script type="module" src="../js/appointments.js"></script>
+
+</body>
 </html>
